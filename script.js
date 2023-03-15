@@ -1,8 +1,12 @@
 
 let obj_commands = {
-  bio: "<a href='https://github.com/mir-evgenii'>Github</a>",
-  skills: '',
-  projects: '',
+  bio: `- In 2015 I started to study programming at the university.<br>
+        - Worked in a university project from 2017 - 2018 using Python and Linux as an Intern developer.<br>
+        - In 2019 - 2021 worked as a Test Engineer and Intern PHP developer.<br>
+        - In 2021 - 2022 worked as a Perl developer in payment system.<br>
+        - Since 2022 I have been working as a PHP developer in a startup in the service sector.`,
+  skills: 'Backend | PHP | Python | Perl',
+  projects: "<a href='https://github.com/mir-evgenii'>Github</a>",
   git: "<a href='https://github.com/mir-evgenii'>Click here!</a>",
   help: "Some help<br>and nothing<br>not work...",
   cat: `──────▄▀▄─────▄▀▄──────<br>
