@@ -1,4 +1,15 @@
+const possibleEmojis = [
+  '🐀','🐁','🐭','🐹','🐂','🐃','🐄','🐮','🐅','🐆','🐯','🐇','🐐','🐑','🐏','🐴',
+  '🐎','🐱','🐈','🐰','🐓','🐔','🐤','🐣','🐥','🐦','🐧','🐘','🐩','🐕','🐷','🐖',
+  '🐗','🐫','🐪','🐶','🐺','🐻','🐨','🐼','🐵','🙈','🙉','🙊','🐒','🐉','🐲','🐊',
+  '🐍','🐢','🐸','🐋','🐳','🐬','🐙','🐟','🐠','🐡','🐚','🐌','🐛','🐜','🐝','🐞',
+];
+function randomEmoji() {
+  var randomIndex = Math.floor(Math.random() * possibleEmojis.length);
+  return possibleEmojis[randomIndex];
+}
 
+const emoji = randomEmoji();
 const name = prompt("What's your name?");
 
 // Generate random chat hash if needed
@@ -138,8 +149,8 @@ function checkDataChannelState() {
 function insertMessageToDOM(options, isFromMe) {
   const template = document.querySelector('template[data-template="message"]');
   const nameEl = template.content.querySelector('.message__name');
-  if (options.name) {
-    nameEl.innerText = options.name;
+  if (options.emoji || options.name) {
+    nameEl.innerText = options.emoji + ' ' + options.name;
   }
   template.content.querySelector('.message__bubble').innerText = options.content;
   const clone = document.importNode(template.content, true);
